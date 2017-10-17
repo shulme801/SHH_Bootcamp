@@ -1,0 +1,101 @@
+/**
+ * CSS Positioning
+ **/
+
+.left-box {
+	position: fixed;
+	background-color: grey;
+	height: 50px;
+	width: 50px;
+	left: 150px;
+}
+
+.relative-box {
+	position: relative;
+	height: 200px;
+	padding: 20px;
+	background: #eee;
+}
+
+.absolute-box {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 100px;
+	width: 100px;
+	background: #999;
+}
+
+#main-container {
+	width: 66%;
+	margin: auto;
+}
+
+.para {
+	text-align: justify;
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  background: #ccc;
+}
+
+section {
+}
+
+#left {
+	padding: 20px;
+    margin-bottom: 20px;
+	float: left;
+	background: #666;
+	width: 33%;
+}
+
+#middle {
+	padding: 20px;
+    margin-bottom: 20px;
+	float: left;
+	width: 33%
+	background: #888;
+}
+
+#right {
+	padding: 20px;
+    margin-bottom: 20px;
+	float: right;
+	width: 33%;
+	background: #666;
+}
+
+#full {
+	clear: both;
+	width: 100%;
+}
+
+#division {
+}
+
+aside {
+	float: left;
+	padding: 20px;
+    margin-bottom: 20px;
+	float: left;
+	width: 33%;
+	height: 33%;
+	background: #fff;
+	border: 3px solid blue;
+}
+
+footer {
+}

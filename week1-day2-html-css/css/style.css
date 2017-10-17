@@ -1,0 +1,11 @@
+body {
+	background-color: #efeee7;
+	font: "Georgia",Times New Roman,Times,serif;
+	color: #333333;
+}
+
+#main-bio,
+#contact-info,
+#bio-image {
+	float: left;
+}

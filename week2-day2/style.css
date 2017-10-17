@@ -1,0 +1,23 @@
+
+h1,
+h2,
+h3,
+h4 { 
+ font-family: 'Quicksand', sans-serif;
+ font-family: 'Open Sans', sans-serif; 
+ color: blue;
+}
+
+ /* paragraph 1*/
+#para1 {
+	font-family: "Open Sans", sans-serif;
+}
+/* paragraph 2*/
+#para2 {
+	font-family: 'Germania One', cursive;
+}
+
+/* paragraph 3*/
+#para3 {
+	font-family: 'Arimo', sans-serif;
+}

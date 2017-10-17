@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My House</title>
+  </head>
+  <body>
+    <h1>Open the console!</h1>
+    <script>
+      var house={
+        doors:{"frontdoor":{locked:true,open:false,},"backdoor1":{locked:true,open:false,},"backdoor2":{locked:true,open:false,},"garagedoor":{locked:true,open:false,}
+        },
+        windows:18,
+        floors:2, 
+        garage:true,
+        adress:"123 Fakestreet trl",
+        price:"$300,000",
+        rooms:["Kitchen","Dining Room","Living Room", "Garage","Office","Bonus Room","Master Bedroom","Bedroom2","Bedroom3","Bathroom Downstairs","Bathroom Upstairs","Master Bathroom"],
+          opendoor:function(door){
+            if(house.doors[door].locked===true){
+              console.log("The door is Locked!")
+            }
+            if(house.doors[door].open===true){
+              console.log("The door is already open!")
+            }
+            if((house.doors[door].locked===false)&&(house.doors[door].open===false)){
+              house.doors[door].open=true
+              console.log("You have opened the door!")
+            }
+          },
+          unlockdoor:function(door){
+            if(house.doors[door].locked===false){
+              console.log("The door is alreayd unlocked!")
+            }
+            if(house.doors[door].locked===true){
+              house.doors[door].locked=false
+              console.log("You have unlocked the door!")
+            }
+          },
+          lockdoor:function(door){
+            if(house.doors[door].locked===true){
+              console.log("The door is already locked!")
+            }
+            if(house.doors[door].locked===false){
+              house.doors[door].locked=true
+              console.log("You have locked the door!")
+            }
+          },
+          closedoor:function(door){
+            if(house.doors[door].open===false){
+              console.log("The door is already closed!")
+            }
+            if(house.doors[door].open===true){
+              house.doors[door].open=false
+              console.log("You have closed the door!")
+            }
+          }
+        }
+        console.log("Controls:")
+        console.log("f=frontdoor")
+        console.log("b=backdoor1")
+        console.log("v=backdoor2")
+        console.log("g=garagedoor")
+        console.log("u=unlock")
+        console.log("l=lock")
+        console.log("o=open")
+        console.log("c=close")
+        var interactWith="none"
+        document.onkeyup = function(event){
+            userText=event.key
+            userText=userText.toLowerCase()
+            var action="none"
+            if(userText==="f"){
+              interactWith="frontdoor"
+              console.log("You are at the front door")
+            }
+            if(userText==="b"){
+              interactWith="backdoor1"
+              console.log("You are at the 1st back door")
+            }
+            if(userText==="v"){
+              interactWith="backdoor2"
+              console.log("You are at the 2nd back door")
+            }
+            if(userText==="g"){
+              interactWith="garagedoor"
+              console.log("You are at the garage door")
+            }
+            if(userText==="u"){
+              action="unlock"
+            }
+            if(userText==="l"){
+              action="lock"
+            }
+            if(userText==="o"){
+              action="open"
+
+            }
+            if(userText==="c"){
+              action="close"
+            }
+            //-----------------
+            if((interactWith==="frontdoor")&&(action==="unlock")){
+              house.unlockdoor("frontdoor")
+              action="none"
+            }
+            if((interactWith==="frontdoor")&&(action==="lock")){
+              house.lockdoor("frontdoor")
+              action="none"
+            }
+            if((interactWith==="frontdoor")&&(action==="open")){
+              house.opendoor("frontdoor")
+              action="none"
+            }
+            if((interactWith==="frontdoor")&&(action==="close")){
+              house.closedoor("frontdoor")
+              action="none"
+            }
+            //-----------------------
+            //-----------------
+            if((interactWith==="backdoor1")&&(action==="unlock")){
+              house.unlockdoor("backdoor1")
+              action="none"
+            }
+            if((interactWith==="backdoor1")&&(action==="lock")){
+              house.lockdoor("backdoor1")
+              action="none"
+            }
+            if((interactWith==="backdoor1")&&(action==="open")){
+              house.opendoor("backdoor1")
+              action="none"
+            }
+            if((interactWith==="backdoor1")&&(action==="close")){
+              house.closedoor("backdoor1")
+              action="none"
+            }
+            //-----------------------
+            //-----------------
+            if((interactWith==="backdoor2")&&(action==="unlock")){
+              house.unlockdoor("backdoor2")
+              action="none"
+            }
+            if((interactWith==="backdoor2")&&(action==="lock")){
+              house.lockdoor("backdoor2")
+              action="none"
+            }
+            if((interactWith==="backdoor2")&&(action==="open")){
+              house.opendoor("backdoor2")
+              action="none"
+            }
+            if((interactWith==="backdoor2")&&(action==="close")){
+              house.closedoor("backdoor2")
+              action="none"
+            }
+            //-----------------------
+            //-----------------
+            if((interactWith==="garagedoor")&&(action==="unlock")){
+              house.unlockdoor("garagedoor")
+              action="none"
+            }
+            if((interactWith==="garagedoor")&&(action==="lock")){
+              house.lockdoor("garagedoor")
+              action="none"
+            }
+            if((interactWith==="garagedoor")&&(action==="open")){
+              house.opendoor("garagedoor")
+              action="none"
+            }
+            if((interactWith==="garagedoor")&&(action==="close")){
+              house.closedoor("garagedoor")
+              action="none"
+            }
+            //-----------------------
+        }
+    </script>
+  </body>
+</html>
